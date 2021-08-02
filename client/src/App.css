@@ -1,38 +1,298 @@
-.App {
-  text-align: center;
+*::before,
+*::after,
+*{
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  overflow-x: hidden;
+}
+/*navbar=======
+==============================================================*/
+.navbar{
+  background-color: transparent;
+  padding: 0 !important;
+}
+.navbar.colorChange{
+  background-color: #fff;
+}
+.logo{
+  width: 11rem;
+  height: 8rem;
+  background-color: #000;
+}
+.linked--page{
+  color: #000;
+  font-size: 1.2rem;
+  margin-left: 1rem;
+  text-decoration: none;
+  font-family: lora;
+}
+.linked--page:hover{
+  color:#000;
+}
+.search-box{
+  margin-left: 2rem;
+}
+.search-box input, 
+.search-box button{
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #000;
+}
+.search-box input{
+  padding: 0 !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+/*landing======
+=============================================================*/
+.landing{
+  background-color:var(--clr-bg-dark);
+  background-image: url(./images/cover.jpg);
+  width: 100%;
   min-height: 100vh;
+  background-size: cover;
+  background-position:center;
+}
+
+/*about =======
+==============================================================*/
+.about{
+  padding: 7% 23%;
+  text-align: center;
+  font-family: lora;
+}
+.about h1{
+  font-size: 3rem;
+}
+.about p{
+  font-size: 1.2rem;
+}
+
+/*dashbord=====
+==============================================================*/
+.sidebar{
+  position: fixed;
+  top : 0;
+  left : 0;
+  height: 100vh; 
+  width: 20%;
+  background-color: #000;
+  padding: 6px 14px;
+}
+.sidebar .logo--content .logo{
   display: flex;
-  flex-direction: column;
+  height: 150px;
+  width: 100%;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.logo--content .logo{
+  font-size: 28px;
+  margin-right: 5px;
+}
+.sidebar #btn{
+  position: absolute;
+  left: 90%;
+  top: 6px;
+  font-size: 20px;
+  height: 35px;
+  width: 35px;
+  text-align: center;
+  line-height: 50px;
+  transform: translateX(-50%);
+}
+.sidebar ul{
+  margin-top: 20px;
+}
+.sidebar ul li{
+  position: relative;
+  height: 50px;
+  width: 100%;
+  margin: 0px 5px;
+  list-style: none;
+  line-height: 50px;
+}
+.sidebar ul li input {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  border-radius: 12px;
+  outline: none;
+  border: none;
+  background-color: red;
+  padding-left: 50px;
+  font-size: 18px;
+  color: #fff;
+}
+.sidebar ul li a #search {
+  position: absolute;
+  z-index: 99999;
+  font-size: 4rem;
+  margin-left: 3%;
+}
+.sidebar ul li a {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: all 0.4s ease;
+}
+.sidebar ul li a span{
+  margin-left: 15px;
+  margin-top: 15px;
+}
+.sidebar .profile--content{
+  position: absolute;
+  color: #fff;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+.sidebar .profile--content .profile{
+  position: relative;
+  padding: 10px 6px;
+  height: 60px;
+  background-color: red;
+}
+.profile--content .profile .profile--details{
+  display: flex;
+  align-items: center;
+}
+.profile .profile--details img{
+  height: 45px;
+  width: 45px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+.profile .profile--details .name--job{
+  margin-left: 10px;
+}
+.profile .profile--details .name{
+  font-size: 15px;
+  font-weight: 400;
+}
+.profile .profile--details .job{
+  font-size: 15px;
+  font-weight: 400;
+}
+.profile #log-out{
+  position: absolute;
+  left: 88%;
+  bottom: 20px;
+  transform: translateX(-50%);
+  min-width: 40px;
+  line-height: 50px;
 }
 
-.App-link {
-  color: #61dafb;
+/*our gradient =
+==================================================*/
+.pasta-title{
+  margin-left: 10%;
+}
+.pasta-title h1{
+  font-size: 1.3rem;
+  font-family: lora;
+  font-weight: 500;
+}
+.pasta-title div{
+  width: 10%;
+  height: 6px;
+  background-color: #e49338;
+  margin-left: 15px;
+  margin-top: 12px;
+}
+.pasta-descrip{
+  transform: rotate(90deg);
+  display: flex;
+  justify-content: right !important;
+  margin-right: 55%;
+}
+.cards-pasta{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  cursor: pointer;
+  margin-right: 7%;
+  margin-left: 7%;
+}
+.pasta img{
+  width: 14rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/*form contatct====
+===================================================*/
+.fork{
+  width: 100%;
+  margin-top: 5%;
+}
+.formsection  form{
+  margin-top:10%;
+  margin-left: 10%;
+}
+.formsection form input{
+  height: 50px;
+}
+.formsection form textarea{
+  height: 200px;
+}
+.formsection form .bouton{
+  background-color: #e49338;
+  border: none;
+  padding: 10px 50px;
+  border-radius: 5px;
+}
+
+
+/*shop=====
+===================================================*/
+.shop-cov{
+  background-image: url(./images/shop-cov.png);
+  background-attachment: fixed !important;
+}
+.shop-descrip {
+  margin-top: 30%;
+}
+
+/*Footer===
+===================================================*/
+.footer{
+  font-family: lora;
+  background-image: url(./images/footer.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 5% 18%;
+  margin-top: 100px;
+  border-top: 1px solid lightgray;
+  color: #000;
+}
+.footer h6{
+  margin-top: 20px;
+  margin-left: 20%;
+}
+.footer h5{
+  font-weight: bold;
+  margin-left: 4%;
+  margin-bottom: 30px;
+}
+.footer select{
+  outline: none;
+  margin-top: 20px;
+  margin-left: 20%;
+  padding: 10px 20px;
+  background: none;
+  color: var(--clr-primary-light);
+  border-color: var(--clr-primary-light);
+}
+.footer ul li {
+  list-style: none;
+}
+.footer .link{
+  text-decoration: none;
+  color: var(--clr-primary-light);
+  cursor: pointer;
+}
+.fooetr .link:hover{
+  color: var(--clr-primary-light);
 }

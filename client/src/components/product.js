@@ -2,6 +2,8 @@ import { getProduct } from '../actions/action'
 import { useDispatch, useSelector } from 'react-redux'
 import React, {useEffect} from 'react'
 
+
+
 export default function ProductList() {
 
      const dispatch = useDispatch()
@@ -26,3 +28,6 @@ export default function ProductList() {
         </div>
     )
 }
+
+
+
