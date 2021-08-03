@@ -7,7 +7,7 @@ import React, {useEffect} from 'react'
 export default function ProductList() {
 
      const dispatch = useDispatch()
-     const product = useSelector(state=>state.productstore)
+     const product = useSelector(state=>state.productstore.datas)
 
      useEffect(() => {
         dispatch(getProduct());
@@ -15,14 +15,15 @@ export default function ProductList() {
       console.log(product, "did we ?");
 
     return (
-        <div>
-            <h1>List of products</h1>
+        <div className="container shop">
         {product.map(el => (
-                    <div>
+                    <div className="mt-5 pt-5">
+                      <img src={el.imagePlat} alt=""/>
                       <h2>{el.namePlat}</h2>
-                      <p>{el.descripPlat}</p>
-                      <h3>{el.pricePlat}</h3>
-                      <h4>{el.ratePlat}</h4>
+                      <h6>{el.descripPlat}</h6>
+                      <h4>{el.pricePlat}</h4>
+                      <h5>{el.ratePlat}</h5>
+                      <button type="submit" className="px-5">Add to Cart</button>
                     </div>
         ))}
         </div>

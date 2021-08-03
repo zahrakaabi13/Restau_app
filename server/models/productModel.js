@@ -2,6 +2,10 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
 const productSchema = new Schema({
+    imagePlat : {
+        type : String,
+        required : true
+    },
     namePlat : {
         type : String,
         required : true

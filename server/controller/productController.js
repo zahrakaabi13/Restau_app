@@ -10,12 +10,14 @@ module.exports = {
         }
     },
     addProduct: async(req,res) => {
+        const imagePlat = req.body.imagePlat
         const namePlat = req.body.namePlat
         const descripPlat = req.body.descripPlat
         const pricePlat = req.body.pricePlat
         const ratePlat = req.body.ratePlat
         try{
             const products = new PRODUCTS({
+                imagePlat,
                 namePlat,
                 descripPlat,
                 pricePlat,

@@ -14,9 +14,9 @@ export function getProduct() {
 }
 
 
-export const addProduct=(namePlat,descripPlat,pricePlat,ratePlat)=> async (dispatch) =>{
+export const addProduct=(imagePlat,namePlat,descripPlat,pricePlat,ratePlat)=> async (dispatch) =>{
     try{
-        const res = await fetchAddProduct (namePlat,descripPlat,pricePlat,ratePlat);
+        const res = await fetchAddProduct (imagePlat,namePlat,descripPlat,pricePlat,ratePlat);
         dispatch ({
             type:"ADD_PRODUCT_SUCCED",     
             payload:res.data

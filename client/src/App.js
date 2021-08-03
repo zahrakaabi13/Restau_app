@@ -1,5 +1,4 @@
 import './App.css';
-import ProductList from './components/product' 
 import {AddinProduct} from './components/AddinProduct'
 import { BrowserRouter, Route} from "react-router-dom";
 import {Dashbord} from './pages/dashbord'
@@ -13,9 +12,8 @@ function App() {
     <BrowserRouter>
        <Route exact path="/"><Home/></Route>
        <Route path="/Poilane/Shop"><Shop/></Route>
-       {/* <ProductList/> 
-       <AddinProduct/>
-       <Dashbord/> */}
+      {/* <AddinProduct/> */}
+      <Route path="/admin"><Dashbord/></Route> 
     </BrowserRouter>
     </>
   );

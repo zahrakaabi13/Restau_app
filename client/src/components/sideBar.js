@@ -7,7 +7,7 @@ export const SideBar = () => {
           <div className="sidebar">
             <div className="logo--content">
                 <div className="logo">
-                   <img className="logo" src={logo} alt=""/>
+                   <img className="logo" src={logo} alt="" id="lg"/>
                    <box-icon name='menu' color='#ffffff' id="btn"></box-icon>
                 </div>
             </div>
@@ -39,7 +39,7 @@ export const SideBar = () => {
                 <div className="profile--content">
                     <div className="profile">
                         <div className="profile--details">
-                             {/* <img src="" alt="hhh"/> */}
+                             <img src="/img/photo.jpg" alt=""/>
                              <div className="name--job">
                                  <div className="name"> Zahra Kaabi </div>
                                  <div className="job"> Junior React Developper</div>
@@ -48,6 +48,10 @@ export const SideBar = () => {
                         <box-icon name='log-out' id="log-out" color='#ffffff'></box-icon>
                     </div>
                 </div>
+          </div>
+
+          <div className="sideRight">
+
           </div>
         </>
     )
